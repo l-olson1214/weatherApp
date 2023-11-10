@@ -11,6 +11,8 @@
 		37E2E4282AFD610F00E367AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2E4272AFD610F00E367AE /* ContentView.swift */; };
 		37E2E42A2AFD610F00E367AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E2E4292AFD610F00E367AE /* Assets.xcassets */; };
 		37E2E42E2AFD610F00E367AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37E2E42D2AFD610F00E367AE /* Preview Assets.xcassets */; };
+		37E2E4362AFD625200E367AE /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2E4352AFD625200E367AE /* WeatherModel.swift */; };
+		37E2E4382AFD675600E367AE /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E2E4372AFD675600E367AE /* WeatherAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		37E2E4292AFD610F00E367AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37E2E42B2AFD610F00E367AE /* WeatherApplication.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherApplication.entitlements; sourceTree = "<group>"; };
 		37E2E42D2AFD610F00E367AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37E2E4352AFD625200E367AE /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		37E2E4372AFD675600E367AE /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		37E2E4242AFD610F00E367AE /* WeatherApplication */ = {
 			isa = PBXGroup;
 			children = (
+				37E2E4342AFD624900E367AE /* WeatherAPIContent */,
 				37E2E4252AFD610F00E367AE /* WeatherApplicationApp.swift */,
 				37E2E4272AFD610F00E367AE /* ContentView.swift */,
 				37E2E4292AFD610F00E367AE /* Assets.xcassets */,
@@ -67,6 +72,15 @@
 				37E2E42D2AFD610F00E367AE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37E2E4342AFD624900E367AE /* WeatherAPIContent */ = {
+			isa = PBXGroup;
+			children = (
+				37E2E4352AFD625200E367AE /* WeatherModel.swift */,
+				37E2E4372AFD675600E367AE /* WeatherAPIClient.swift */,
+			);
+			path = WeatherAPIContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +154,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37E2E4282AFD610F00E367AE /* ContentView.swift in Sources */,
+				37E2E4362AFD625200E367AE /* WeatherModel.swift in Sources */,
+				37E2E4382AFD675600E367AE /* WeatherAPIClient.swift in Sources */,
 				37E2E4262AFD610F00E367AE /* WeatherApplicationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +290,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -292,10 +310,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olson.grey.WeatherApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +331,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -330,10 +351,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.olson.grey.WeatherApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
